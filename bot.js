@@ -349,9 +349,9 @@ client.on('message', message => {
  
  client.on('message', async message => {
   if(message.content.startsWith(prefix + "طلب")) {
-    await message.channel.send("**اسمك**")د.then(e => {
+    await message.channel.send("**("**اسمك.then(e => {
     let filter = m => m.author.id === message.author.id
-    let lan = '';
+    let lan = ''
     let md = '';
     let br = '';
     let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
@@ -851,7 +851,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Abdou ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`.help | Vampire System`,"http://twitch.tv/abdoufersaoui_dz")
+client.user.setGame(`.help | - Vámpire Network.`,"http://twitch.tv/abdoufersaoui_dz")
 client.user.setStatus("dnd")
 });
 
