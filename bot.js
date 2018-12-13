@@ -192,7 +192,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ? ")
            });
              }
-if (message.content === "*.umc") {
+if (message.content === ".umc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -241,33 +241,33 @@ message.author.send(`
 ***__وصف عن البوت__***
 **
 ─════════════ {✯اوامر البوت✯} ════════════─
-❧ *ban ➺ تبنيد عضو من السيرفر
-❧ *kick ➺ طرد عضو من السيرفر
-❧ *mute ➺ كتم العضو
-❧ *unmute ➺ فك الميوت
-❧ *bc ➺ رسالة جماعية لاعضاء السيرفر
-❧ *link ➺ رابط السيرفر
-❧ *clear ➺ مسح الرسائل من المحادثة
-❧ *marry ➺ لعبة زواج
-❧ *kf ➺ كف
-❧ *mc ➺ قفل الروم
-❧ *umc ➺ فتح الروم
-❧ *say ➺ البوت يكرر كلام انته تكتبه
-❧ *Send ➺ ارسال رسالة الى شخص من البوت
-❧ *skin يتلعلك صورة سكين ماين كرافت
-❧ *invites كم جبت لسيرفر
-❧ *new للأنشأ روم تكيت 
-❧ *rps لعبة حجرة ورقة مقص
-❧ *date الوقت
-❧ *rome معلومات الروم
-❧ *hacked ➺ لعبة التهكير
-❧ *bans ➺ معرفة عدد الاشخاص المبندين من السيرفر
-❧ *cv ➺ انشاء روم صوتي
-❧ *ct ➺ انشاء روم كتابي
-❧ *setVoice ➺ يسويلك روم يقولك عدد الاشخاص في الفويس
-❧ *move ➺ سحب الشخص الى الروم الي انته فيه
-❧ *fast ➺ لعبة اسرع
-❧ *news ➺ اخر تحديثات البوت
+❧ .ban ➺ تبنيد عضو من السيرفر
+❧ .kick ➺ طرد عضو من السيرفر
+❧ .mute ➺ كتم العضو
+❧ .unmute ➺ فك الميوت
+❧ .bc ➺ رسالة جماعية لاعضاء السيرفر
+❧ .link ➺ رابط السيرفر
+❧ .clear ➺ مسح الرسائل من المحادثة
+❧ .marry ➺ لعبة زواج
+❧ .kf ➺ كف
+❧ .mc ➺ قفل الروم
+❧ .umc ➺ فتح الروم
+❧ .say ➺ البوت يكرر كلام انته تكتبه
+❧ .Send ➺ ارسال رسالة الى شخص من البوت
+❧ .skin يتلعلك صورة سكين ماين كرافت
+❧ .invites كم جبت لسيرفر
+❧ .new للأنشأ روم تكيت 
+❧ .rps لعبة حجرة ورقة مقص
+❧ .date الوقت
+❧ .rome معلومات الروم
+❧ .hacked ➺ لعبة التهكير
+❧ .bans ➺ معرفة عدد الاشخاص المبندين من السيرفر
+❧ .cv ➺ انشاء روم صوتي
+❧ .ct ➺ انشاء روم كتابي
+❧ .setVoice ➺ يسويلك روم يقولك عدد الاشخاص في الفويس
+❧ .move ➺ سحب الشخص الى الروم الي انته فيه
+❧ .fast ➺ لعبة اسرع
+❧ .news ➺ اخر تحديثات البوت
 ─════════════ {✯By Dream ✯} ════════════─
 **
 `);
@@ -276,6 +276,7 @@ message.author.send(`
 
 
 client.on('message', message => {
+	var perfix = '.';
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -314,7 +315,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("hacked")) {
+    if (message.content.startsWith(".hacked")) {
       if (message.author.bot) return
            message.delete();
              let args = message.content.split(' ').slice(1);
@@ -349,9 +350,9 @@ client.on('message', message => {
  
  client.on('message', async message => {
   if(message.content.startsWith(prefix + "طلب")) {
-    await message.channel.send("**("**اسمك.then(e => {
+    await message.channel.send("**اسمك**").then(e => {
     let filter = m => m.author.id === message.author.id
-    let lan = ''
+    let lan = '';
     let md = '';
     let br = '';
     let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
@@ -385,6 +386,16 @@ gg.send({embed : new Discord.RichEmbed()
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
+}        
+})
+})
+})
+})
+})
+})
+})
+ }
+})
 
 
 client.on('message', message =>{
@@ -770,7 +781,7 @@ if(news.content === '.news') {
 });
 
 client.on('message', message => {
-    if (message.content == "fast") {
+    if (message.content == ".fast") {
         var x = ["DreamKing",
 "DeathGames",
 "زيرو كنج",
@@ -965,7 +976,7 @@ client.on('message', message => {
 
 client.on('message',function(message) {
     let w = ['Rock','Paper','Scissors'];
-    var prefix = "*"
+    var prefix = "."
    if(message.content.startsWith(prefix + "rps")) {
        message.channel.send(` \`\`\`css
 Choose one of the following.
