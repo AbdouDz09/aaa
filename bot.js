@@ -385,16 +385,6 @@ gg.send({embed : new Discord.RichEmbed()
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
-}        
-})
-})
-})
-})
-})
-})
-})
- }
-})
 
 
 client.on('message', message =>{
